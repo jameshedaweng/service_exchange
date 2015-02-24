@@ -4,3 +4,18 @@
 body{
   padding: 0px 30px 30px 30px;
 }
+
+.packery-item { 
+  @media(max-width:991px){
+    width: 50%;
+  }
+  @media(max-width:480px){
+    width: 100%;
+  }
+  width: 25%;
+  padding:10px;
+  text-align: justify;
+  img{
+    width:100%;
+  }
+}

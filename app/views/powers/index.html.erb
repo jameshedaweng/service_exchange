@@ -1,0 +1,16 @@
+<h1>Powers</h1>
+<br>
+<div class="container-outer">
+  <div class="packery-container">
+    <% @powers.each do |p| %>
+      <div class="packery-item">
+        <%= cl_image_tag(p.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>
+        <h4><%= p.title %></h4>
+        <p><%= p.description %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<%= link_to '+ New Power', new_power_path, class: "btn btn-success" %>
+<%= link_to 'Back to home', root_path, class: "btn btn-default" %>

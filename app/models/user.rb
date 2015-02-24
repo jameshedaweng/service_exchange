@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :powers
+
   include RoleModel
   roles_attribute :roles_mask
-  roles :admin, :premium
+  roles :admin, :powerful, :super_powerful
 end

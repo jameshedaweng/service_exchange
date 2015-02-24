@@ -11,6 +11,29 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.ui.widget
+//= require jquery.iframe-transport
+//= require jquery.fileupload
+//= require cloudinary/jquery.cloudinary
+//= require attachinary
+//= require packery.pkgd
+//= require imagesloaded
 //= require_tree .
+
+$(document).ready(function(){
+  $('.attachinary-input').attachinary();
+  loadPowerLibrary();
+});
+
+var loadPowerLibrary = function(){
+  var container = $(".packery-container");
+  var resizeId;
+  container.packery({
+    itemSelector: '.packery-item'
+  }).imagesLoaded(function() {
+    container.packery();
+  });
+};

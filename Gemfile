@@ -15,6 +15,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'role_model'
 gem 'cancancan'
+gem 'cloudinary'
+gem 'attachinary'
+gem 'packery-rails'
+gem 'imagesLoaded_rails'
 
 group :development, :test do
   gem 'byebug'
