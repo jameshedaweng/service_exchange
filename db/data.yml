@@ -1,0 +1,341 @@
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - roles_mask
+  records: 
+  - - 1
+    - admin@test.com
+    - $2a$10$2lHt9qJKO4U7WQt.c1C5aOMgsM5c2bmR/MJmNIcPXfXOREJFrdwxK
+    - 
+    - 
+    - 
+    - 3
+    - '2015-02-24 17:32:30.731431'
+    - '2015-02-24 17:07:50.579673'
+    - '::1'
+    - '::1'
+    - '2015-02-24 17:02:22.135616'
+    - '2015-02-24 17:32:30.733010'
+    - 1
+  - - 2
+    - dummy0@test.com
+    - $2a$10$TqkAJA6pV69Ig9NJfoW6tezSq0ilRc7z0pjMWheoCHtsXolWg/e4.
+    - 
+    - 
+    - 
+    - 4
+    - '2015-02-24 17:17:27.012069'
+    - '2015-02-24 17:17:15.977354'
+    - '::1'
+    - '::1'
+    - '2015-02-24 17:02:34.936831'
+    - '2015-02-24 17:17:27.013550'
+    - 
+  - - 3
+    - dummy1@test.com
+    - $2a$10$UBxcZmLY71TrR08xLdQwhOoAG/Ev2dmyMuXd7Lw02HKr/IR47ntV6
+    - 
+    - 
+    - 
+    - 1
+    - '2015-02-24 17:05:53.600875'
+    - '2015-02-24 17:05:53.600875'
+    - '::1'
+    - '::1'
+    - '2015-02-24 17:02:42.999747'
+    - '2015-02-24 17:05:53.602314'
+    - 
+  - - 4
+    - dummy2@test.com
+    - $2a$10$ls8kZ4hFuNq33/8HFr7xM.luampsQRbtvjcr.VnrR6L8zB/MMee6C
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2015-02-24 17:02:51.135533'
+    - '2015-02-24 17:02:51.135533'
+    - 
+  - - 5
+    - dummy3@test.com
+    - $2a$10$hjAoDIp5jXhrDQac60XGkO5/m1pb2WRQDYXePrJmpw7xvl3J4Kyuu
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - '2015-02-24 17:03:07.671404'
+    - '2015-02-24 17:03:07.671404'
+    - 
+
+---
+attachinary_files:
+  columns:
+  - id
+  - attachinariable_id
+  - attachinariable_type
+  - scope
+  - public_id
+  - version
+  - width
+  - height
+  - format
+  - resource_type
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - 2
+    - Power
+    - thumbnail
+    - hruvjktyutvslukzotea
+    - '1424797487'
+    - 383
+    - 268
+    - png
+    - image
+    - '2015-02-24 17:04:49.123109'
+    - '2015-02-24 17:04:49.123109'
+  - - 7
+    - 1
+    - Power
+    - thumbnail
+    - cnjwdqgrciy2cdwi0cjt
+    - '1424799315'
+    - 706
+    - 463
+    - png
+    - image
+    - '2015-02-24 17:35:18.519981'
+    - '2015-02-24 17:35:18.519981'
+  - - 8
+    - 4
+    - Power
+    - thumbnail
+    - hikpingavogsgwndovi6
+    - '1424799371'
+    - 702
+    - 447
+    - png
+    - image
+    - '2015-02-24 17:36:18.112647'
+    - '2015-02-24 17:36:18.112647'
+  - - 9
+    - 5
+    - Power
+    - thumbnail
+    - h8zxngdlktjmga2auxfd
+    - '1424799414'
+    - 558
+    - 548
+    - png
+    - image
+    - '2015-02-24 17:37:03.967358'
+    - '2015-02-24 17:37:03.967358'
+  - - 10
+    - 6
+    - Power
+    - thumbnail
+    - q8bbipjymxgswejlpe4k
+    - '1424799450'
+    - 1040
+    - 526
+    - png
+    - image
+    - '2015-02-24 17:37:34.752605'
+    - '2015-02-24 17:37:34.752605'
+  - - 11
+    - 7
+    - Power
+    - thumbnail
+    - rngwz1x3fbywgnots9sz
+    - '1424799479'
+    - 701
+    - 586
+    - png
+    - image
+    - '2015-02-24 17:38:05.538946'
+    - '2015-02-24 17:38:05.538946'
+  - - 12
+    - 8
+    - Power
+    - thumbnail
+    - ri8ttsoyidjwakr5j8uo
+    - '1424799514'
+    - 951
+    - 533
+    - png
+    - image
+    - '2015-02-24 17:38:36.506026'
+    - '2015-02-24 17:38:36.506026'
+  - - 13
+    - 9
+    - Power
+    - thumbnail
+    - h5ylrrcynclp4l8gqkun
+    - '1424799545'
+    - 837
+    - 495
+    - png
+    - image
+    - '2015-02-24 17:39:07.101328'
+    - '2015-02-24 17:39:07.101328'
+  - - 14
+    - 10
+    - Power
+    - thumbnail
+    - ojervfcnjmokofsz3ibj
+    - '1424799601'
+    - 847
+    - 574
+    - png
+    - image
+    - '2015-02-24 17:40:02.296838'
+    - '2015-02-24 17:40:02.296838'
+  - - 16
+    - 12
+    - Power
+    - thumbnail
+    - gdkc3rsixchw0enfot4c
+    - '1424799802'
+    - 556
+    - 602
+    - png
+    - image
+    - '2015-02-24 17:43:51.272618'
+    - '2015-02-24 17:43:51.272618'
+
+---
+powers:
+  columns:
+  - id
+  - title
+  - description
+  - created_at
+  - updated_at
+  - user_id
+  records: 
+  - - 1
+    - New Power 1
+    - Lorem ipsum dolor sit amet, equidem accusam pertinacia ad vix, putant malorum
+      scribentur eu pri, per graeco propriae interesset et. Cum cu dolor prompta sapientem,
+      eu vix nobis audire lobortis, natum intellegam in vim. At aperiam incorrupte
+      adversarium pro, vel ut veniam recusabo. Ad cum affert voluptatibus, ius ei
+      quem quot populo.
+    - '2015-02-24 17:04:13.366247'
+    - '2015-02-24 17:35:20.620114'
+    - 2
+  - - 2
+    - New Power 2
+    - Has utroque detraxit cu. Alterum adipiscing nam no. Ne civibus mnesarchum per,
+      te eam erat quaerendum. Ut civibus elaboraret pro, an modo sint vivendo mei,
+      graeco virtute mei ne. Pri in error saperet consequuntur, nec id eruditi invidunt
+      rationibus. Aeque ceteros ut vix.
+    - '2015-02-24 17:04:49.121382'
+    - '2015-02-24 17:35:42.547503'
+    - 1
+  - - 4
+    - New Power 4
+    - "Lorem ipsum dolor sit amet, an eos errem impetus inciderint, eius sonet menandri
+      pro at. Usu nulla errem omnesque ex. Error nusquam menandri ne has, eligendi
+      noluisse est ad. Mel ubique placerat ut, ne eos veri verterem. Per in quodsi
+      dolores, facer dolore tincidunt cu vix.\r\n\r\nNo quot patrioque mel, eam ne
+      possit invidunt oporteat. Est errem graecis ocurreret in, dico adipisci reformidans
+      cu sed. Ad falli inimicus sea. Cetero ocurreret ea per, ne libris sensibus petentium
+      mea, est noster hendrerit ea."
+    - '2015-02-24 17:06:09.532209'
+    - '2015-02-24 17:07:56.539831'
+    - 3
+  - - 5
+    - New Power 3
+    - "Ea fuisset volumus vis. In ceteros quaerendum comprehensam quo. Pri nulla facete
+      legendos eu, eum veritus atomorum id. Mutat quando scripserit eum id, ad cum
+      oblique percipit, feugiat insolens sadipscing et pri.\r\n\r\nRebum moderatius
+      has te. Pro an inani summo. Ex putant dicunt iuvaret vim. Stet postea alienum
+      quo at. Ne ius mollis fuisset.\r\n\r\nVis graecis nostrum ex. At meis rationibus
+      ullamcorper his, commodo quaeque vel ne. Purto harum lobortis has id, id ignota
+      facete scripta duo, qui eleifend maiestatis neglegentur ut. Sed repudiandae
+      ullamcorper ea."
+    - '2015-02-24 17:08:22.694387'
+    - '2015-02-24 17:37:05.450757'
+    - 1
+  - - 6
+    - New Power 5
+    - Ea fuisset volumus vis. In ceteros quaerendum comprehensam quo. Pri nulla facete
+      legendos eu, eum veritus atomorum id. Mutat quando scripserit eum id, ad cum
+      oblique percipit, feugiat insolens sadipscing et pri.
+    - '2015-02-24 17:09:02.322259'
+    - '2015-02-24 17:37:35.397508'
+    - 1
+  - - 7
+    - New Power 6
+    - Has utroque detraxit cu. Alterum adipiscing nam no. Ne civibus mnesarchum per,
+      te eam erat quaerendum. Ut civibus elaboraret pro, an modo sint vivendo mei,
+      graeco virtute mei ne. Pri in error saperet consequuntur, nec id eruditi invidunt
+      rationibus. Aeque ceteros ut vix.
+    - '2015-02-24 17:38:05.536846'
+    - '2015-02-24 17:38:05.536846'
+    - 1
+  - - 8
+    - New Power 7
+    - Rebum moderatius has te. Pro an inani summo. Ex putant dicunt iuvaret vim. Stet
+      postea alienum quo at. Ne ius mollis fuisset.
+    - '2015-02-24 17:38:36.503977'
+    - '2015-02-24 17:38:36.503977'
+    - 1
+  - - 9
+    - New Power 8
+    - "Lorem ipsum dolor sit amet, equidem accusam pertinacia ad vix, putant malorum
+      scribentur eu pri, per graeco propriae interesset et. Cum cu dolor prompta sapientem,
+      eu vix nobis audire lobortis, natum intellegam in vim. At aperiam incorrupte
+      adversarium pro, vel ut veniam recusabo. Ad cum affert voluptatibus, ius ei
+      quem quot populo.\r\n\r\nHas utroque detraxit cu. Alterum adipiscing nam no.
+      Ne civibus mnesarchum per, te eam erat quaerendum. Ut civibus elaboraret pro,
+      an modo sint vivendo mei, graeco virtute mei ne. Pri in error saperet consequuntur,
+      nec id eruditi invidunt rationibus. Aeque ceteros ut vix.\r\n"
+    - '2015-02-24 17:39:07.099005'
+    - '2015-02-24 17:39:07.099005'
+    - 1
+  - - 10
+    - New Power 9
+    - "Ea fuisset volumus vis. In ceteros quaerendum comprehensam quo. Pri nulla facete
+      legendos eu, eum veritus atomorum id. Mutat quando scripserit eum id, ad cum
+      oblique percipit, feugiat insolens sadipscing et pri.\r\n\r\nRebum moderatius
+      has te. Pro an inani summo. Ex putant dicunt iuvaret vim. Stet postea alienum
+      quo at. Ne ius mollis fuisset."
+    - '2015-02-24 17:40:02.294986'
+    - '2015-02-24 17:40:02.294986'
+    - 1
+  - - 12
+    - New Power 10
+    - "Lorem ipsum dolor sit amet, equidem accusam pertinacia ad vix, putant malorum
+      scribentur eu pri, per graeco propriae interesset et. Cum cu dolor prompta sapientem,
+      eu vix nobis audire lobortis, natum intellegam in vim. At aperiam incorrupte
+      adversarium pro, vel ut veniam recusabo. Ad cum affert voluptatibus, ius ei
+      quem quot populo.\r\n\r\nHas utroque detraxit cu. Alterum adipiscing nam no.
+      Ne civibus mnesarchum per, te eam erat quaerendum. Ut civibus elaboraret pro,
+      an modo sint vivendo mei, graeco virtute mei ne. Pri in error saperet consequuntur,
+      nec id eruditi invidunt rationibus. Aeque ceteros ut vix."
+    - '2015-02-24 17:43:51.270864'
+    - '2015-02-24 17:43:51.270864'
+    - 1

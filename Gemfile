@@ -19,6 +19,7 @@ gem 'cloudinary'
 gem 'attachinary'
 gem 'packery-rails'
 gem 'imagesLoaded_rails'
+gem 'yaml_db'
 
 group :development, :test do
   gem 'byebug'
