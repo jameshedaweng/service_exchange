@@ -1,8 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@font-face {
+    font-family: Gotham;
+    src: url('Gotham-Light.woff', font) format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url('Gotham-Medium.woff', font) format('woff');
+    font-weight: 500;
+}
+
 body{
+  font-size: 13px;
   padding: 0px 30px 30px 30px;
+  font-family: 'Gotham', 'Helvetica Neue', sans-serif;
+  color:#333333;
 }
 
 .packery-item { 
