@@ -3,13 +3,19 @@
 
 @font-face {
     font-family: Gotham;
-    src: url('Gotham-Light.woff', font) format('woff');
+    src: font-url('Gotham-Light.woff') format('woff');
     font-weight: 300;
 }
 
 @font-face {
     font-family: Gotham;
-    src: url('Gotham-Medium.woff', font) format('woff');
+    src: font-url('Gotham-Book.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: font-url('Gotham-Medium.woff') format('woff');
     font-weight: 500;
 }
 
