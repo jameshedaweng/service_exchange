@@ -1,0 +1,35 @@
+<div class="section-container">
+  <h1>Manage categories</h1>
+  <div class="action-container">
+    <%= link_to '+ New category', new_category_path, class: "btn btn-success" %>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Theme Color</th>
+        <th>Glyph</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @categories.each do |c| %>
+        <tr>
+          <td><%= c.name %></td>
+          <td>
+            <div class="color-rect" style="background-color:<%= c.theme_color %>">
+              <%= c.theme_color %>
+            </div>
+          </td>
+          <td><i class="fa <%= c.glyph %>"></i></td>
+          <td>
+            <%= link_to 'Edit', edit_category_path(c), class: "btn btn-info" %>
+            <%= link_to 'Delete', c, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= back_link %>
+</div>

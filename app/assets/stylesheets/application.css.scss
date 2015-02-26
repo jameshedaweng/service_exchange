@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 @font-face {
     font-family: Gotham;
@@ -21,9 +22,83 @@
 
 body{
   font-size: 13px;
-  padding: 0px 30px 30px 30px;
   font-family: 'Gotham', 'Helvetica Neue', sans-serif;
   color:#333333;
+  text-align: center;
+}
+
+// .notice{
+//   display: none;
+// }
+
+// .alert{
+//   display: none;
+// }
+
+h1{
+  font-weight: 300;
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+th{
+  text-align: center;
+}
+
+.link-no-style:link, .link-no-style:hover, .link-no-style:active, .link-no-style:visited{
+  color: white;
+  text-decoration: none !important;
+}
+
+.btn i span{
+  font-family: 'Gotham', 'Helvetica Neue', sans-serif;
+}
+
+@mixin btn-transparent($color, $bg){
+  @extend .link-no-style; 
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px; 
+  margin-right: 5px;
+  &:hover, &:active{
+    color: $color;
+    background-color: $bg;
+  }
+  i span{
+    font-family: 'Gotham', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+  }
+}
+
+.btn-transparent-info{
+  @include btn-transparent(white, #5bc0de);
+}
+
+.btn-transparent-warning{
+  @include btn-transparent(white, #d9534f);
+}
+
+.color-rect{
+  font-size: 14px;
+  color:white;
+  text-align: center;
+  padding: 7px 12px;
+  width:120px;
+  float: none;
+  margin: 0 auto;
+}
+
+.section-container{
+  margin: 100px 30px;
+}
+
+.action-container{
+  margin-bottom: 30px;
 }
 
 .packery-item { 
@@ -35,8 +110,32 @@ body{
   }
   width: 25%;
   padding:10px;
-  text-align: justify;
-  img{
-    width:100%;
+
+  .packery-item-inner{
+    text-align: justify;
+    color: white;
+    
+    img{
+      width:100%;
+      margin-bottom: 5px;
+    }
+    h4{
+      padding:0px 12.5px;
+    }
+    p{
+      padding:0px 12.5px 12.5px 12.5px;
+      margin: 0;
+    }
+    .item-actions{
+      padding: 10px 12.5px 17.5px 12.5px;
+    }
+  }
+}
+
+.category-item{
+  color:white;
+  padding:20px 50px;
+  .title{
+    font-size: 3em;
   }
 }

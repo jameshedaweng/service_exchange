@@ -6,6 +6,7 @@ class Ability
     logged_in_abilities
     @user ||= User.new
     can :read, :all
+    can :discover, Power
   end
 
   private

@@ -25,7 +25,8 @@
 
 $(document).ready(function(){
   $('.attachinary-input').attachinary();
-  loadPowerLibrary();
+  getCategoriesSection();
+  getDiscoverSection();
 });
 
 var loadPowerLibrary = function(){
@@ -35,5 +36,18 @@ var loadPowerLibrary = function(){
     itemSelector: '.packery-item'
   }).imagesLoaded(function() {
     container.packery();
+  });
+};
+
+var getDiscoverSection = function(){
+  $.get( "/discover", function( data ) {
+    $( "#section-discover" ).html( data );
+    loadPowerLibrary();
+  });
+};
+
+var getCategoriesSection = function(){
+  $.get( "/categories_gallery", function( data ) {
+    $( "#section-categories" ).html( data );
   });
 };

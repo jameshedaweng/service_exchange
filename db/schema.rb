@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224154303) do
+ActiveRecord::Schema.define(version: 20150226122843) do
 
   create_table "attachinary_files", force: :cascade do |t|
     t.integer  "attachinariable_id"
@@ -29,12 +29,21 @@ ActiveRecord::Schema.define(version: 20150224154303) do
 
   add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "theme_color"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "glyph",       default: "fa-cog", null: false
+  end
+
   create_table "powers", force: :cascade do |t|
     t.string   "title",       default: "New Power", null: false
     t.string   "description"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
   create_table "users", force: :cascade do |t|

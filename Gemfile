@@ -20,6 +20,7 @@ gem 'attachinary'
 gem 'packery-rails'
 gem 'imagesLoaded_rails'
 gem 'yaml_db'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'

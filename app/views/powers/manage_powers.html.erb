@@ -1,34 +1,36 @@
-<h1>Manage Powers</h1>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @powers.each do |p| %>
+<div class="section-container">
+  <h1>Manage Powers</h1>
+  <div class="action-container">
+    <%= link_to '+ New Power', new_power_path, class: "btn btn-success" %>
+  </div>
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= p.title %></td>
-        <td><%= p.user.email %></td>
-        <td>
-          <%= link_to 'Show', p, class: "btn btn-info" %>
-          <% if can? :update, p %>
-            <%= link_to 'Edit', edit_power_path(p), class: "btn btn-info" %>
-          <% end %>
-          <% if can? :destroy, p %>
-          <%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-          <% end %>
-        </td>
+        <th>Title</th>
+        <th>User</th>
+        <th>Category</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to '+ New Power', new_power_path, class: "btn btn-success" %>
-<%= link_to 'Back to home', root_path, class: "btn btn-default" %>
+    </thead>
+  
+    <tbody>
+      <% @powers.each do |p| %>
+        <tr>
+          <td><%= p.title %></td>
+          <td><%= p.user.email %></td>
+          <td><%= p.category.name %></td>
+          <td>
+            <%= link_to 'Show', p, class: "btn btn-info" %>
+            <% if can? :update, p %>
+              <%= link_to 'Edit', edit_power_path(p), class: "btn btn-info" %>
+            <% end %>
+            <% if can? :destroy, p %>
+            <%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= back_link %>
+</div>

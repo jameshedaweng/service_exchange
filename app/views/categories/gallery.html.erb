@@ -1,0 +1,7 @@
+<% @categories.each do |c| %>
+  <div class="category-item" style="background-color:<%= c.theme_color %>">
+    <div class="title">
+      <i class="fa <%= c.glyph %>"></i>&nbsp;&nbsp;<%= c.name %>
+    </div>
+  </div>
+<% end %>

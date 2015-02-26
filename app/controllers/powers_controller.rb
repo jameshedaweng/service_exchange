@@ -50,12 +50,21 @@ class PowersController < ApplicationController
     @powers = Power.accessible_by(current_ability, :manage)
   end
 
+  def my_powers
+    @powers = current_user.powers
+  end
+
+  def discover
+    @powers = Power.order('created_at DESC').limit(10)
+    render :layout => !request.xhr?
+  end
+
   private
   def set_power
     @power = Power.find(params[:id])
   end
 
   def power_params
-    params.require(:power).permit(:title, :description, :thumbnail)
+    params.require(:power).permit(:title, :description, :thumbnail, :category_id)
   end
 end

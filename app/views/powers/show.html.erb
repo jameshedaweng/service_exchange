@@ -1,11 +1,16 @@
-<h1>
-  <%= @power.title %>
-</h1>
-<br>
-<%= cl_image_tag(@power.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>
-<br>
-<p>
-  <%= @power.description %>
-</p>
-<%= link_to 'Edit', edit_power_path(@power), class: "btn btn-info" %> 
-<%= link_to 'Back', powers_path, class: "btn btn-default" %>
+<div class="section-container">
+  <h1>
+    <%= @power.title %>
+  </h1>
+  <p>
+    <%= @power.category.name %>
+  </p>
+  <br>
+  <%= cl_image_tag(@power.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>
+  <br>
+  <p>
+    <%= @power.description %>
+  </p>
+  <%= link_to 'Edit', edit_power_path(@power), class: "btn btn-info" %> 
+  <%= back_link %>
+</div>
