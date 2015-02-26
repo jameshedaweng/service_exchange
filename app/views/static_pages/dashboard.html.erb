@@ -1,0 +1,10 @@
+<div class="section-container">
+  <h1>Dashboard</h1>
+  <div class="action-container">
+    <h2>Welcome <%= current_user.email %>!</h2>
+  </div>
+  <%= link_to "Manage Powers", manage_powers_path, class: "btn btn-primary" %>
+  <%= link_to "Manage Categories", manage_categories_path, class: "btn btn-primary" if current_user.has_role? :admin %>
+  <%= link_to "My Powers", my_powers_path, class: "btn btn-info" %>
+  <%= link_to content_tag(:i, content_tag(:span, " Home"), class: "fa fa-home"), root_path, class: "btn btn-default" %>
+</div>

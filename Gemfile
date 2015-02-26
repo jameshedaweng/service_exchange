@@ -21,6 +21,7 @@ gem 'packery-rails'
 gem 'imagesLoaded_rails'
 gem 'yaml_db'
 gem 'socialization'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'

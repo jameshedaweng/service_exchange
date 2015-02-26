@@ -59,12 +59,15 @@ class PowersController < ApplicationController
   def dislike
     current_user.unlike!(@power)
     redirect_to @power
-    #if true #request.xhr?
-    #  url = view_context.link_to "Like", like_power_path(@power), id: :like_button      
-    #  render json: { url: url }
-    #else
-    #  redirect_to @power
-    #end
+  end
+
+  def my_powers
+    @powers = current_user.powers
+  end
+
+  def discover
+    @powers = Power.order('created_at DESC').limit(10)
+    render :layout => !request.xhr?
   end
 
   private
@@ -73,6 +76,6 @@ class PowersController < ApplicationController
   end
 
   def power_params
-    params.require(:power).permit(:title, :description, :thumbnail)
+    params.require(:power).permit(:title, :description, :thumbnail, :category_id)
   end
 end
