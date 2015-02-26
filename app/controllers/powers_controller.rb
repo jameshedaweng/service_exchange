@@ -1,7 +1,6 @@
 class PowersController < ApplicationController
   load_and_authorize_resource
   before_action :set_power, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token, only: [:like, :dislike]
 
   def index
     @powers = Power.accessible_by(current_ability)

@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(version: 20150226122843) do
   add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",        default: "New Category", null: false
-    t.string   "theme_color", default: "#333333",      null: false
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
-    t.string   "glyph",       default: "fa-cog",       null: false
+    t.string   "name"
+    t.string   "theme_color"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "glyph",       default: "fa-cog", null: false
   end
 
   create_table "follows", force: :cascade do |t|
