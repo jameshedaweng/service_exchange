@@ -3,6 +3,11 @@
 </h1>
 <br>
 <%= cl_image_tag(@power.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>
+<% if current_user.likes? @power %>
+	<span><%= link_to "Dislike", dislike_power_path(@power), id: "like_button" %></span>
+<% else %>
+	<span><%= link_to "Like", like_power_path(@power), id: "like_button" %></span>	
+<% end %>
 <br>
 <p>
   <%= @power.description %>

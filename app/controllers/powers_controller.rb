@@ -1,12 +1,13 @@
 class PowersController < ApplicationController
   load_and_authorize_resource
   before_action :set_power, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:like, :dislike]
 
   def index
     @powers = Power.accessible_by(current_ability)
   end
 
-  def show
+  def show    
   end
 
   def new
@@ -48,6 +49,22 @@ class PowersController < ApplicationController
 
   def manage_powers
     @powers = Power.accessible_by(current_ability, :manage)
+  end
+
+  def like    
+    current_user.like!(@power)
+    redirect_to @power
+  end
+
+  def dislike
+    current_user.unlike!(@power)
+    redirect_to @power
+    #if true #request.xhr?
+    #  url = view_context.link_to "Like", like_power_path(@power), id: :like_button      
+    #  render json: { url: url }
+    #else
+    #  redirect_to @power
+    #end
   end
 
   private

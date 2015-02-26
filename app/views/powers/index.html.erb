@@ -4,8 +4,8 @@
   <div class="packery-container">
     <% @powers.each do |p| %>
       <div class="packery-item">
-        <%= cl_image_tag(p.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>
-        <h4><%= p.title %></h4>
+        <%= cl_image_tag(p.thumbnail.path, :width => 300, :crop => :fill, :quality => 75) %>        
+        <h4><%= link_to p.title, power_path(p) %></h4>
         <p><%= p.description %></p>
       </div>
     <% end %>

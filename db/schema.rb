@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224154303) do
+ActiveRecord::Schema.define(version: 20150225101633) do
 
   create_table "attachinary_files", force: :cascade do |t|
     t.integer  "attachinariable_id"
@@ -28,6 +28,39 @@ ActiveRecord::Schema.define(version: 20150224154303) do
   end
 
   add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
+
+  create_table "follows", force: :cascade do |t|
+    t.string   "follower_type"
+    t.integer  "follower_id"
+    t.string   "followable_type"
+    t.integer  "followable_id"
+    t.datetime "created_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
+
+  create_table "likes", force: :cascade do |t|
+    t.string   "liker_type"
+    t.integer  "liker_id"
+    t.string   "likeable_type"
+    t.integer  "likeable_id"
+    t.datetime "created_at"
+  end
+
+  add_index "likes", ["likeable_id", "likeable_type"], name: "fk_likeables"
+  add_index "likes", ["liker_id", "liker_type"], name: "fk_likes"
+
+  create_table "mentions", force: :cascade do |t|
+    t.string   "mentioner_type"
+    t.integer  "mentioner_id"
+    t.string   "mentionable_type"
+    t.integer  "mentionable_id"
+    t.datetime "created_at"
+  end
+
+  add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables"
+  add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions"
 
   create_table "powers", force: :cascade do |t|
     t.string   "title",       default: "New Power", null: false
