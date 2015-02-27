@@ -53,18 +53,18 @@ class PowersController < ApplicationController
   def like
     if current_user != @power.user 
       current_user.like!(@power)
-      redirect_to @power
+      redirect_to :back
     else
-      redirect_to @power, notice: 'You cannot like your own Power!'
+      redirect_to :back, notice: 'You cannot like your own Power!'
     end
   end
 
   def unlike
     if current_user != @power.user 
       current_user.unlike!(@power)
-      redirect_to @power
+      redirect_to :back
     else
-      redirect_to @power, notice: 'You cannot unlike your own Power!'
+      redirect_to :back, notice: 'You cannot unlike your own Power!'
     end
   end
 

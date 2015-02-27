@@ -63,8 +63,9 @@ th{
   @extend .link-no-style; 
   border: 2px solid white;
   border-radius: 5px;
-  padding: 5px 10px; 
-  margin-right: 5px;
+  padding: 2px 8px;
+  margin-right:5px; 
+  margin-bottom: 12.5px;
   &:hover, &:active{
     color: $color;
     background-color: $bg;
@@ -79,8 +80,16 @@ th{
   @include btn-transparent(white, #5bc0de);
 }
 
-.btn-transparent-warning{
+.btn-transparent-danger{
   @include btn-transparent(white, #d9534f);
+}
+
+.btn-transparent-warning{
+  @include btn-transparent(white, #f0ad4e)
+}
+
+.btn-transparent-success{
+  @include btn-transparent(white, #5cb85c)
 }
 
 .color-rect{
@@ -94,7 +103,7 @@ th{
 }
 
 .section-container{
-  margin: 100px 30px;
+  margin: 30px;
 }
 
 .action-container{
@@ -112,11 +121,6 @@ th{
   padding:10px;
 
   .packery-item-inner{
-    text-align: justify;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
     color: white;
     
     img{
@@ -127,11 +131,17 @@ th{
       padding:0px 12.5px;
     }
     p{
+      text-align: justify;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
       padding:0px 12.5px 12.5px 12.5px;
       margin: 0;
     }
     .item-actions{
-      padding: 10px 12.5px 17.5px 12.5px;
+      text-align: left;
+      padding: 0px 12.5px;
     }
   }
 }

@@ -14,16 +14,20 @@ class Ability
 
   def logged_in_abilities
     if @user
-        can :like, Power, Power.where() do |p|
-          
-        end
-        can :unlike, Power
       if @user.has_role? :admin
         can :manage, :all
       else
         can :create, Power
         can :manage, Power, :user_id => @user.id
       end
+
+      cannot :like, Power do |p|
+        p.liked_by?(@user)
+      end
+      cannot :unlike, Power do |p|
+        !p.liked_by?(@user)
+      end
+      cannot [:like, :unlike], Power, :user_id => @user.id
     end
   end
 end

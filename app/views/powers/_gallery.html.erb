@@ -7,6 +7,20 @@
             <%= cl_image_tag(p.thumbnail.path, :width => 300, :crop => :fill, :quality => 75)%>
             <h4><%= p.title %></h4>
             <p><%= p.description %></p>
+            <div class="item-actions">
+              <% if can? :like, p %>
+                <%= link_to link_to content_tag(:i, content_tag(:span, " Like"), class: "fa fa-thumbs-up"), like_power_path(p), class: "btn btn-transparent-success" %>
+              <% end %>
+
+              <% if can? :unlike, p %>
+                <%= link_to link_to content_tag(:i, content_tag(:span, " Unlike"), class: "fa fa-thumbs-down"), unlike_power_path(p), class: "btn btn-transparent-warning" %>
+              <% end %>
+              
+              <% if can? :manage, p %>
+                <%= link_to content_tag(:i, content_tag(:span, " Edit"), class: "fa fa-pencil"), edit_power_path(p), class: "btn btn-transparent-info" %>
+                <%= link_to content_tag(:i, content_tag(:span, " Delete"), class: "fa fa-times"), p, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-transparent-danger" %>
+              <% end %>
+            </div>
           </div>
         <% end %>
       </div>
