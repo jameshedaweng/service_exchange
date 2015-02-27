@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :powers do
     member do
       get 'like'
-      get 'dislike'   
+      get 'unlike'   
     end
   end
   get "/powers_manage", to: "powers#manage_powers", as: "manage_powers"

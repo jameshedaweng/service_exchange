@@ -7,12 +7,17 @@ class Ability
     @user ||= User.new
     can :read, :all
     can :discover, Power
+    can :gallery, Category
   end
 
   private
 
   def logged_in_abilities
     if @user
+        can :like, Power, Power.where() do |p|
+          
+        end
+        can :unlike, Power
       if @user.has_role? :admin
         can :manage, :all
       else

@@ -113,6 +113,10 @@ th{
 
   .packery-item-inner{
     text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
     color: white;
     
     img{

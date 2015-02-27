@@ -50,14 +50,22 @@ class PowersController < ApplicationController
     @powers = Power.accessible_by(current_ability, :manage)
   end
 
-  def like    
-    current_user.like!(@power)
-    redirect_to @power
+  def like
+    if current_user != @power.user 
+      current_user.like!(@power)
+      redirect_to @power
+    else
+      redirect_to @power, notice: 'You cannot like your own Power!'
+    end
   end
 
-  def dislike
-    current_user.unlike!(@power)
-    redirect_to @power
+  def unlike
+    if current_user != @power.user 
+      current_user.unlike!(@power)
+      redirect_to @power
+    else
+      redirect_to @power, notice: 'You cannot unlike your own Power!'
+    end
   end
 
   def my_powers
