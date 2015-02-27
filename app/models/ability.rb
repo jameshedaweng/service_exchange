@@ -19,14 +19,10 @@ class Ability
       else
         can :create, Power
         can :manage, Power, :user_id => @user.id
+        can :like, Power
+        can :unlike, Power
       end
 
-      can :like, Power do |p|
-        !p.liked_by?(@user)
-      end
-      can :unlike, Power do |p|
-        p.liked_by?(@user)
-      end
       cannot :like, Power do |p|
         p.liked_by?(@user)
       end

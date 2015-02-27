@@ -3,21 +3,21 @@
 @import "font-awesome";
 
 @font-face {
-    font-family: Gotham;
-    src: font-url('Gotham-Light.woff') format('woff');
-    font-weight: 300;
+  font-family: Gotham;
+  src: font-url('Gotham-Light.woff') format('woff');
+  font-weight: 300;
 }
 
 @font-face {
-    font-family: Gotham;
-    src: font-url('Gotham-Book.woff') format('woff');
-    font-weight: 400;
+  font-family: Gotham;
+  src: font-url('Gotham-Book.woff') format('woff');
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: Gotham;
-    src: font-url('Gotham-Medium.woff') format('woff');
-    font-weight: 500;
+  font-family: Gotham;
+  src: font-url('Gotham-Medium.woff') format('woff');
+  font-weight: 500;
 }
 
 body{
@@ -85,11 +85,11 @@ th{
 }
 
 .btn-transparent-warning{
-  @include btn-transparent(white, #f0ad4e)
+  @include btn-transparent(white, #f0ad4e);
 }
 
 .btn-transparent-success{
-  @include btn-transparent(white, #5cb85c)
+  @include btn-transparent(white, #5cb85c);
 }
 
 .color-rect{
@@ -122,12 +122,12 @@ th{
 
   .packery-item-inner{
     color: white;
-    
     img{
       width:100%;
       margin-bottom: 5px;
     }
     h4{
+      text-align: left;
       padding:0px 12.5px;
     }
     p{
