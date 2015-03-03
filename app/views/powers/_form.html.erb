@@ -1,37 +1,52 @@
-<%= form_for(@power) do |f| %>
-  <% if @power.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@power.errors.count, "error") %> prohibited this power from being saved:</h2>
-
-      <ul>
-      <% @power.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="row" ng-app="power" ng-controller="PowerFormCtrl" ng-init="init('<%= @power.title %>', '<%= @power.description %>', '<%= @power.category.theme_color %>', '<%= @power.category.id %>')">
+  <div class="col-sm-6 power-form" >
+    <%= form_for(@power) do |f| %>
+      <% if @power.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@power.errors.count, "error") %> prohibited this power from being saved:</h2>
+    
+          <ul>
+          <% @power.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
+    
+      <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title, { :'ng-model' => 'power.title' }%>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, { :'ng-model' => 'power.description' } %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :thumbnail %><br>
+        <%= f.attachinary_file_field :thumbnail %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.label :category %><br>
+        <%= f.collection_select :category_id, Category.all, :id, :name, {}, {:'ng-model' => 'power.category'} %>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit class: "btn btn-success" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-sm-6 power-preview">
+    {{power.category}}
+    <input type="text" ng-model="power.theme_color" id="power-theme-color" disabled>
+    <h2> Preview: </h2>
+    <div class="packery-item packery-item-preview">
+      <div class="packery-item-inner" style="background-color:{{power.theme_color}}">
+        <h4>{{power.title}}</h4>
+        <p>{{power.description}}</p>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
   </div>
-  <br>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :thumbnail %><br>
-    <%= f.attachinary_file_field :thumbnail %>
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
-  </div>
-  <br>
-  <div class="actions">
-    <%= f.submit class: "btn btn-success" %>
-  </div>
-<% end %>
+</div>

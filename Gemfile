@@ -22,11 +22,15 @@ gem 'imagesLoaded_rails'
 gem 'yaml_db'
 gem 'socialization'
 gem 'font-awesome-rails'
+gem 'angularjs-rails'
 
 group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'cucumber-rails', '~> 1.4.2' , :require => false
+  gem 'database_cleaner'
 end
 

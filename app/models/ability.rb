@@ -22,7 +22,6 @@ class Ability
         can :like, Power
         can :unlike, Power
       end
-
       cannot :like, Power do |p|
         p.liked_by?(@user)
       end

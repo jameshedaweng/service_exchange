@@ -120,6 +120,16 @@ th{
   width: 25%;
   padding:10px;
 
+  &.packery-item-preview{
+    @media(max-width:991px){
+      width: 50vw;
+    }
+    @media(max-width:480px){
+      width: 100vw;
+    }
+    width: 25vw;
+  }
+
   .packery-item-inner{
     color: white;
     img{
@@ -152,4 +162,11 @@ th{
   .title{
     font-size: 3em;
   }
+}
+
+.power-form{
+  text-align: left;
+}
+.power-preview{
+  text-align: left;
 }

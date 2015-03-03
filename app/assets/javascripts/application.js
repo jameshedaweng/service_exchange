@@ -11,9 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
+//= require angular
 //= require jquery.ui.widget
 //= require jquery.iframe-transport
 //= require jquery.fileupload
