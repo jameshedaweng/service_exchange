@@ -13,6 +13,15 @@ Feature: Manage Powers
 
   Scenario: Edit my Power
   	When I go to edit one of my Powers
-  	And I change the title to "Random Item"
-    When I click on update Power
+  	And I change the title to "Random Item"    
   	Then I should see the title changed on the Power page
+
+  Scenario: Add new Power
+  	When I got to add new Power Page
+  	And I fill the form and press submit button
+  	# Need to change the text
+  	Then I should see the text "New Power Added"
+
+  Scenario: Delete Power
+	When I press delete button on one of my Powers	
+	Then I should see the message 'Power was successfully deleted'
