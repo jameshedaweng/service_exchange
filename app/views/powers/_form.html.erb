@@ -1,5 +1,5 @@
-<div class="row" ng-app="power" ng-controller="PowerFormCtrl" ng-init="init('<%= @power.title %>', '<%= @power.description %>', '<%= @power.category.theme_color %>', '<%= @power.category.id %>')">
-  <div class="col-sm-6 power-form" >
+<div class="row">
+  <div class="col-sm-12 power-form" >
     <%= form_for(@power) do |f| %>
       <% if @power.errors.any? %>
         <div id="error_explanation">
@@ -15,12 +15,12 @@
     
       <div class="field">
         <%= f.label :title %><br>
-        <%= f.text_field :title, { :'ng-model' => 'power.title' }%>
+        <%= f.text_field :title %>
       </div>
       <br>
       <div class="field">
         <%= f.label :description %><br>
-        <%= f.text_area :description, { :'ng-model' => 'power.description' } %>
+        <%= f.text_area :description %>
       </div>
       <br>
       <div class="field">
@@ -30,23 +30,12 @@
       <br>
       <div class="field">
         <%= f.label :category %><br>
-        <%= f.collection_select :category_id, Category.all, :id, :name, {}, {:'ng-model' => 'power.category'} %>
+        <%= f.collection_select :category_id, Category.all, :id, :name, {} %>
       </div>
       <br>
       <div class="actions">
         <%= f.submit class: "btn btn-success" %>
       </div>
     <% end %>
-  </div>
-  <div class="col-sm-6 power-preview">
-    {{power.category}}
-    <input type="text" ng-model="power.theme_color" id="power-theme-color" disabled>
-    <h2> Preview: </h2>
-    <div class="packery-item packery-item-preview">
-      <div class="packery-item-inner" style="background-color:{{power.theme_color}}">
-        <h4>{{power.title}}</h4>
-        <p>{{power.description}}</p>
-      </div>
-    </div>
   </div>
 </div>
